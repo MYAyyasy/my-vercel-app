@@ -4,7 +4,7 @@
     {
       "src": "/api/process",
       "dest": "/api/process.py",
-      "methods": ["POST"]
+      "methods": ["POST", "OPTIONS"]  // Tambahkan OPTIONS
     }
   ]
 }
