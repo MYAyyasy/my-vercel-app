@@ -1,0 +1,10 @@
+from http.server import BaseHTTPRequestHandler
+import json
+
+class Handler(BaseHTTPRequestHandler):
+    def do_POST(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
+        self.send_header('Access-Control-Allow-Origin', '*')  # Izinkan CORS
+        self.end_headers()
+        self.wfile.write(json.dumps({"success": True, "message": "API bekerja!"}).encode())
